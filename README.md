@@ -1,113 +1,76 @@
-📘 Quiz Score Manager
+# Quiz Score Manager
 
-A Python mini-project designed to practice Functions, Dictionaries, Sets, File Handling, and JSON storage.
-This program allows you to add, update, view, and analyze quiz scores for multiple students.
+A Python-based mini-project designed to practice **JSON file handling**, **functions**, **dictionaries**, and **sets**.
+The program allows you to record, update, and analyze quiz scores for multiple students using auto-generated Student IDs.
 
-🔧 Features
-✅ 1. Add / Update Quiz Score
+---
 
-Each student is automatically assigned a unique Student ID.
+## Features
 
-You can record quiz scores for any subject.
+### 1. Add or Update Quiz Score
 
-If the student already exists (matched by name), the system updates the record.
+* Each student receives an automatic **Student ID**.
+* If a student already exists (matched by name), their scores update.
+* Supports multiple subjects per student.
 
-✅ 2. Show All Records
+### 2. View All Records
 
-Displays a clean list of all students:
+* Displays all students along with:
 
-Their name
+  * Student ID
+  * Name
+  * Subjects and scores
 
-Their unique ID
+### 3. Highest Scorer Report
 
-All subjects with scores
+* Finds highest scorer(s) across all subjects.
+* Supports tie conditions.
+* Uses sets to track unique subjects.
 
-✅ 3. Highest Scorer Report
+### 4. Persistent JSON Storage
 
-Finds the highest scorer(s) across all subjects.
+* Data is stored in `students.json`.
+* Automatically loads previous data when the program starts.
+* Automatically saves data when exiting.
 
-Supports ties (multiple toppers).
+---
 
-Uses set logic to remove duplicate subjects.
+## Project Structure
 
-✅ 4. Persistent JSON Storage
-
-All data is stored in students.json.
-
-Automatically loads saved data when the program starts.
-
-Automatically saves updated data when exiting.
-
-📂 Project Structure
+```
 QuizScoreManager/
 │
 ├── main.py
-├── students.json   (auto-generated after first save)
+├── students.json   (generated automatically)
 └── README.md
+```
 
-🧠 Concepts Used
-📌 1. Dictionaries
+---
 
-Used for storing student profiles in this structure:
+## Concepts Covered
 
-{
-  "id_101": {
-    "name": "Aman",
-    "scores": {"Math": 9, "English": 8}
-  }
-}
+* **Dictionaries** for structured student data
+* **Sets** for unique subjects
+* **Functions** for modular design
+* **JSON File Handling** for persistent storage
 
-📌 2. Sets
+---
 
-Used to collect unique subjects and avoid repetition.
+## How to Run
 
-📌 3. Functions
+1. Open a terminal or PowerShell
+2. Navigate to the project folder
+3. Run:
 
-Modular code with functions for:
-
-Loading JSON
-
-Saving JSON
-
-Adding a student
-
-Updating scores
-
-Displaying all data
-
-Generating reports
-
-📌 4. File Handling
-
-Safe reading and writing using:
-
-json.load()
-json.dump()
-
-▶️ How to Run
-
-Open terminal / PowerShell
-
-Navigate to the project folder
-
-Run the file:
-
+```
 python main.py
+```
 
-📝 Example Interaction
-==== Quiz Score Manager ====
-1. Add/Update Quiz Score
-2. Show All Scores
-3. Highest Scorer Report
-4. Save & Exit
-Enter choice: 1
+---
 
-Student name: Aman
-Subject: Math
-Score: 9
-✔ Score updated successfully!
+## Sample JSON (students.json)
 
-💾 JSON Storage Example (students.json)
+```json
 {
   "id_101": {
     "name": "Aman",
@@ -123,27 +86,55 @@ Score: 9
     }
   }
 }
+```
 
-🛡️ Error Handling Included
+---
 
-Invalid choices
+## Example Console Output
 
-Non-numeric score
+```
+==== Quiz Score Manager ====
+1. Add/Update Quiz Score
+2. Show All Scores
+3. Highest Scorer Report
+4. Save & Exit
+Enter choice: 1
 
-Score out of range
+Student name: Aman
+Subject: Math
+Score: 9
+Score saved successfully!
+```
 
-Empty input
+---
 
-File not found (auto-creates new file)
+## Error Handling
 
-Safe overwrite of existing data
+The program safely handles:
 
-🎯 Learning Outcome
+* Invalid menu choices
+* Empty name/subject inputs
+* Non-numeric score inputs
+* Score not in 0–10 range
+* Corrupted or missing JSON files
+* Duplicate student names (auto-updates)
 
-By completing this project, you clearly understand:
+---
 
-✔ How to use sets to collect unique values
-✔ How to use dictionaries for structured data
-✔ How to write modular code using functions
-✔ How to handle JSON files
-✔ How to build small but practical backend tools
+## Learning Outcomes
+
+By completing this project, you learn:
+
+* How dictionaries and nested structures work
+* How sets automatically avoid duplicate entries
+* How to build modular programs with functions
+* How to store and load persistent data with JSON
+* How to create a clean, usable Python console application
+
+---
+
+## License
+
+This project is free to use for learning and practice.
+
+---
