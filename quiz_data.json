@@ -1,0 +1,22 @@
+{
+  "next_id": 105,
+  "students": {
+    "101": {
+      "name": "Bastab",
+      "scores": {
+        "Maths": {
+          "score": 10,
+          "ts": "2025-11-20 12:29:00"
+        }
+      }
+    },
+    "102": {
+      "name": "Bastab",
+      "scores": {}
+    },
+    "104": {
+      "name": "1Bs",
+      "scores": {}
+    }
+  }
+}
