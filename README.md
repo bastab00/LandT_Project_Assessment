@@ -10,7 +10,7 @@ The program allows you to record, update, and analyze quiz scores for multiple s
 ### 1. Add or Update Quiz Score
 
 * Each student receives an automatic **Student ID**.
-* If a student already exists (matched by name), their scores update.
+* If a student already exists, their scores update.
 * Supports multiple subjects per student.
 
 ### 2. View All Records
