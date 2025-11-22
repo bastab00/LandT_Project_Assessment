@@ -1,88 +1,68 @@
-# Quiz Score Manager
+# Quiz Score Manager — README
 
-A Python-based mini-project designed to practice **JSON file handling**, **functions**, **dictionaries**, and **sets**.
-The program allows you to record, update, and analyze quiz scores for multiple students using auto-generated Student IDs.
-
----
-
-## Features
-
-### 1. Add or Update Quiz Score
-
-* Each student receives an automatic **Student ID**.
-* If a student already exists, their scores update.
-* Supports multiple subjects per student.
-
-### 2. View All Records
-
-* Displays all students along with:
-
-  * Student ID
-  * Name
-  * Subjects and scores
-
-### 3. Highest Scorer Report
-
-* Finds highest scorer(s) across all subjects.
-* Supports tie conditions.
-* Uses sets to track unique subjects.
-
-### 4. Persistent JSON Storage
-
-* Data is stored in `quiz_data.json`.
-* Automatically loads previous data when the program starts.
-* Automatically saves data when exiting.
+A clean, professional **Quiz Score Manager** application built using Python for backend logic, JSON for data storage, and a simple GUI.
 
 ---
 
-## Project Structure
+## 1. Overview
+
+This project allows you to manage student quiz scores efficiently. It supports adding, updating, deleting, and searching for students and their subject scores, along with generating rankings and subject-wise statistics.
+
+---
+
+## 2. Features
+
+* Add new students (auto-generated ID)
+* Update existing scores
+* Delete students or specific subject entries
+* Search by student name (partial match supported)
+* Generate leaderboard (ranked by total score)
+* Find highest scorer per subject
+* Calculate average score per subject
+* Simple dark-themed frontend interface
+* JSON-based persistent storage
+
+---
+
+## 3. Project Structure
 
 ```
-QuizScoreManager/
+quiz_manager/
 │
-├── main.py
-├── quiz_data.json   (generated automatically)
-└── README.md
+├── main.py                     # Entry point (runs the menu)
+├── gui.py                      # GUI
+│
+├── data/
+│   └── quiz_data.json          # JSON database file
+│
+├── utils/
+│   ├── validators.py           # Input validation helpers
+│   └── file_ops.py             # File checks, safe creation
+│
+├── core/
+│   ├── student_ops.py          # Add / delete / search students
+│   ├── score_ops.py            # Add / update / delete scores
+│   ├── report_ops.py           # Stats: averages, highest scorer
+│   └── ranking_ops.py          # Leaderboard, ranking logic
+│
+└── menu/
+    └── menu.py                 # CLI menu handling
 ```
 
 ---
 
-## Concepts Covered
 
-* **Dictionaries** for structured student data
-* **Sets** for unique subjects
-* **Functions** for modular design
-* **JSON File Handling** for persistent storage
-
----
-
-## How to Run
-
-1. Open a terminal or PowerShell
-2. Navigate to the project folder
-3. Run:
+## 4. Example JSON Structure
 
 ```
-python main.py
-```
-
----
-
-## Sample JSON (quiz_data.json)
-
-```json
 {
-  "id_101": {
-    "name": "Bastab",
-    "scores": {
-      "Math": 9,
-      "English": 8
-    }
-  },
-  "id_102": {
-    "name": "Sibga",
-    "scores": {
-      "Science": 10
+  "students": {
+    "1": {
+      "name": "Bastab Gogoi",
+      "scores": {
+        "Math": 10,
+        "English": 9
+      }
     }
   }
 }
@@ -90,51 +70,21 @@ python main.py
 
 ---
 
-## Example Console Output
+## 5. Possible Future Enhancements
 
-```
-==== Quiz Score Manager ====
-1. Add/Update Quiz Score
-2. Show All Scores
-3. Highest Scorer Report
-4. Save & Exit
-Enter choice: 1
-
-Student name: Bastab
-Subject: Math
-Score: 9
-Score saved successfully!
-```
+* Database integration (SQLite / PostgreSQL)
+* CSV export for reports
+* Login system for authentication
+* Light/dark theme toggle
+* Student dashboard view
 
 ---
 
-## Error Handling
 
-The program safely handles:
+## 6. License
 
-* Invalid menu choices
-* Empty name/subject inputs
-* Non-numeric score inputs
-* Score not in 0–10 range
-* Corrupted or missing JSON files
-* Duplicate student names (auto-updates)
+This project is licensed under the **MIT License**.
 
 ---
 
-## Learning Outcomes
-
-By completing this project, you learn:
-
-* How dictionaries and nested structures work
-* How sets automatically avoid duplicate entries
-* How to build modular programs with functions
-* How to store and load persistent data with JSON
-* How to create a clean, usable Python console application
-
----
-
-## License
-
-This project is free to use for learning and practice.
-
----
+A clean, modular, and minimal project to practice structured development using Python and web technologies.
