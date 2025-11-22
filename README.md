@@ -10,7 +10,7 @@ The program allows you to record, update, and analyze quiz scores for multiple s
 ### 1. Add or Update Quiz Score
 
 * Each student receives an automatic **Student ID**.
-* If a student already exists (matched by name), their scores update.
+* If a student already exists, their scores update.
 * Supports multiple subjects per student.
 
 ### 2. View All Records
@@ -29,7 +29,7 @@ The program allows you to record, update, and analyze quiz scores for multiple s
 
 ### 4. Persistent JSON Storage
 
-* Data is stored in `students.json`.
+* Data is stored in `quiz_data.json`.
 * Automatically loads previous data when the program starts.
 * Automatically saves data when exiting.
 
@@ -41,7 +41,7 @@ The program allows you to record, update, and analyze quiz scores for multiple s
 QuizScoreManager/
 │
 ├── main.py
-├── students.json   (generated automatically)
+├── quiz_data.json   (generated automatically)
 └── README.md
 ```
 
@@ -68,19 +68,19 @@ python main.py
 
 ---
 
-## Sample JSON (students.json)
+## Sample JSON (quiz_data.json)
 
 ```json
 {
   "id_101": {
-    "name": "Aman",
+    "name": "Bastab",
     "scores": {
       "Math": 9,
       "English": 8
     }
   },
   "id_102": {
-    "name": "Riya",
+    "name": "Sibga",
     "scores": {
       "Science": 10
     }
@@ -100,7 +100,7 @@ python main.py
 4. Save & Exit
 Enter choice: 1
 
-Student name: Aman
+Student name: Bastab
 Subject: Math
 Score: 9
 Score saved successfully!
