@@ -1,5 +1,5 @@
 {
-  "next_id": 105,
+  "next_id": 107,
   "students": {
     "101": {
       "name": "Bastab",
@@ -7,7 +7,8 @@
         "Maths": {
           "score": 10,
           "ts": "2025-11-20 12:29:00"
-        }
+        },
+        "Math": 10
       }
     },
     "102": {
@@ -16,6 +17,14 @@
     },
     "104": {
       "name": "1Bs",
+      "scores": {}
+    },
+    "105": {
+      "name": "Bastab",
+      "scores": {}
+    },
+    "106": {
+      "name": "Bastab Gogoi",
       "scores": {}
     }
   }
